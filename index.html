@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/flipclock.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>SeongJun ― Developer</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="content">
+                <img src="/img/profile.jpg" id="profile">
+                <p>안녕하세요. 개발자 임성준입니다. 천천히 둘러보고 가세요~ </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content" onclick="location.href='/about.html'">
+                <img src="https://img.icons8.com/nolan/96/user-male-circle.png"/>
+                <p>About</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content" onclick="location.href='/skills.html'">
+                <img src="https://img.icons8.com/nolan/96/google-code.png"/>
+                <p>Skills</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content" onclick="location.href='/project.html'">
+                <img src="https://img.icons8.com/nolan/96/web.png"/>
+                <p>Project</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content" onclick="location.href='/contact.html'">
+                <img src="https://img.icons8.com/nolan/96/email-open.png"/>
+                <p>Contatct</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <!-- Use Flipclock.js -->
+                <div class="clock"></div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <div id="toggle">
+                    <i class="indicator">
+                    </i>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="/js/flipclock.js"></script>
+    <script src="/js/resource.js"></script>
+</body>
+</html>
