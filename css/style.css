@@ -228,4 +228,333 @@ body.light_mode
     }
 }
 
+/* Skills */
+.s_container
+{
+    width: 40rem;
+    position: relative;
+}
+.s_container h1
+{
+    margin-top: 20%;
+    color: white;
+}
+.s_container .skills
+{
+    position: relative;
+    display: flex;
+    margin: 2rem 0;
+    padding: 24px 10px 18px;
+    background: linear-gradient(#616161 0%, #333 10%, #222);
+    border-radius: 0.8rem;
+    overflow: hidden;
+    border: 0.2rem solid black;
+    transition: 0.5s;
+}
+.s_container:hover .skills
+{
+    opacity: 0.05;
+}
+.s_container .skills:hover
+{
+    opacity: 1;
+    transform: scale(1.1);
+}
+.s_container .skills:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+}
+.s_container .skills .s_name
+{
+    position: relative;
+    width: 110px;
+    text-align: right;
+    color: white;
+    margin-top: -2px;
+    text-transform: uppercase;
+}
+.s_container .skills .s_value
+{
+    position: relative;
+    width: 40px;
+    text-align: center;
+    color: white;
+    margin-top: -2px;
+    text-transform: uppercase;
+}
+.s_container .skills .s_percent
+{
+    position: relative;
+    width: calc(100% - 150px);
+    height: 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    background: #151515;
+    box-shadow: inset 0 0 10px black;
+    overflow: hidden;
+}
+.s_container .skills .s_percent .s_progress
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    background: white;
+    box-shadow: inset 0 0 2px black;
+    animation: s_animate 2s ease-in-out forwards;
+}
+@keyframes s_animate 
+{
+    from
+    {
+        width: 0;
+    }
+}
+.s_container .skills:nth-child(2) .s_percent .s_progress
+{
+    background: linear-gradient(45deg, #1fe6ff, #673AB7)
+}
+.s_container .skills:nth-child(3) .s_percent .s_progress
+{
+    background: linear-gradient(45deg, #e01a1a, #f1f515)
+}
+.s_container .skills:nth-child(4) .s_percent .s_progress
+{
+    background: linear-gradient(45deg, #bcffb3, #0ac914)
+}
+.s_container .skills:nth-child(5) .s_percent .s_progress
+{
+    background: linear-gradient(45deg, #81044d, #cb1fff)
+}
+.s_container .skills:nth-child(6) .s_percent .s_progress
+{
+    background: linear-gradient(45deg, #fdf912, #f00c0c)
+}
+.s_container .skills:nth-child(7) .s_percent .s_progress
+{
+    background: linear-gradient(45deg, #098ba1, #64ff9f)
+}
 
+/* contact */
+.contact-body
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.contact-body ul
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.contact-body ul li
+{
+    list-style: none;
+    margin: 0 3rem;
+}
+.contact-body ul li a
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 3rem;
+    color: #eaeaea;
+    transition: 0.5s;
+}
+.contact-body ul li a:hover
+{
+    color: #eaeaea;
+}
+.contact-body ul li a:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #eaeaea;
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0);
+    transition: 0.5s cubic-bezier(.95, .32, .37, 1.31);
+}
+.contact-body ul li a:hover:before
+{
+    transform: scale(1);
+}
+.contact-body ul li:nth-child(1) a:hover:before
+{
+    background: #3b5998 ;
+}
+.contact-body ul li:nth-child(2) a:hover:before
+{
+    background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+}
+.contact-body ul li:nth-child(3) a:hover:before
+{
+    background:#EA4335 ;
+}
+.contact-body ul li:nth-child(4) a:hover:before
+{
+    background: #000 ;
+}
+
+/* about */
+.a_body
+{
+    align-items: center;
+    flex-direction: column;
+    background-color: #111;
+}
+.a_container 
+{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    background-color: #111;
+}
+.profile
+{
+    margin: 5rem auto;
+    background: none;
+    align-items: center;
+}
+.profile p
+{
+    
+}
+.profile img
+{
+    border-radius: 50%;
+    width: 30rem;
+}
+.timeline 
+{
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline ul 
+{
+    list-style: none;
+}
+.timeline ul li 
+{
+    padding: 20px;
+    background-color: #1e1f22;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.timeline ul li:last-child 
+{
+    margin-bottom: 0;
+}
+.timeline-content h1 
+{
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.timeline-content p 
+{
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+}
+.timeline-content .date 
+{
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+@media only screen and (min-width: 768px) 
+{
+    .timeline:before 
+    {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100%;
+        background-color: gray;
+    }
+    .timeline ul li 
+    {
+        width: 50%;
+        position: relative;
+        margin-bottom: 50px;
+    }
+    .timeline ul li:nth-child(odd) 
+    {
+        float: left;
+        clear: right;
+        transform: translateX(-30px);
+        border-radius: 20px 0px 20px 20px;
+    }
+    .timeline ul li:nth-child(even) 
+    {
+        float: right;
+        clear: left;
+        transform: translateX(30px);
+        border-radius: 0px 20px 20px 20px;
+    }
+    .timeline ul li::before 
+    {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: gray;
+        top: 0px;
+    }
+    .timeline ul li:nth-child(odd)::before 
+    {
+        transform: translate(50%, -50%);
+        right: -30px;
+    }
+    .timeline ul li:nth-child(even)::before 
+    {
+        transform: translate(-50%, -50%);
+        left: -30px;
+    }
+    .timeline-content .date 
+    {
+        position: absolute;
+        top: -30px;
+    }
+    .timeline ul li:hover::before 
+    {
+        background-color: aqua;
+    }
+}
