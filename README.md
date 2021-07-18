@@ -2,13 +2,21 @@
 
 저의 개인 홈페이지 입니다.
 
-<hr>
+* * *
 
 # version
-#### V 0.1 
+
+#### V 0.2
 ```
-1. index 페이지 작성
-2. flipclock 오픈소스 사용
-3. index 페이지 반으형 웹으로 만듬
+
+1. about, skills, contact 페이지 완성
+
 ```
- 
+
+# update 예정
+```
+
+1. home(index) 페이지로 돌아가는 토글키
+2. project 페이지
+
+```
