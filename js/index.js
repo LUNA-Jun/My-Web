@@ -11,3 +11,9 @@ toggle.onclick = function(){
 var clock = $('.clock').FlipClock({
     clockFace: 'TwelveHourClock'
 });
+
+const navigation = document.querySelector('.navigation');
+        document.querySelector('.n_toggle').onclick = function(){
+            this.classList.toggle('nav');
+            navigation.classList.toggle('nav');
+        }

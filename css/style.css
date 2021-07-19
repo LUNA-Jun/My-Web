@@ -354,18 +354,18 @@ body.light_mode
     align-items: center;
     height: 100vh;
 }
-.contact-body ul
+.contact ul
 {
     margin: 0;
     padding: 0;
     display: flex;
 }
-.contact-body ul li
+.contact ul li
 {
     list-style: none;
     margin: 0 3rem;
 }
-.contact-body ul li a
+.contact ul li a
 {
     position: relative;
     display: flex;
@@ -379,11 +379,11 @@ body.light_mode
     color: #eaeaea;
     transition: 0.5s;
 }
-.contact-body ul li a:hover
+.contact ul li a:hover
 {
     color: #eaeaea;
 }
-.contact-body ul li a:before
+.contact ul li a:before
 {
     content: '';
     position: absolute;
@@ -397,23 +397,23 @@ body.light_mode
     transform: scale(0);
     transition: 0.5s cubic-bezier(.95, .32, .37, 1.31);
 }
-.contact-body ul li a:hover:before
+.contact ul li a:hover:before
 {
     transform: scale(1);
 }
-.contact-body ul li:nth-child(1) a:hover:before
+.contact ul li:nth-child(1) a:hover:before
 {
     background: #3b5998 ;
 }
-.contact-body ul li:nth-child(2) a:hover:before
+.contact ul li:nth-child(2) a:hover:before
 {
     background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
 }
-.contact-body ul li:nth-child(3) a:hover:before
+.contact ul li:nth-child(3) a:hover:before
 {
     background:#EA4335 ;
 }
-.contact-body ul li:nth-child(4) a:hover:before
+.contact ul li:nth-child(4) a:hover:before
 {
     background: #000 ;
 }
@@ -437,13 +437,18 @@ body.light_mode
 }
 .profile
 {
-    margin: 5rem auto;
+    position: relative;
+    margin: 5rem;
     background: none;
     align-items: center;
+    transition: 0.5s;
+    text-align: center;
 }
 .profile p
-{
-    
+{  
+    margin: 1.2rem;
+    color: #ffff;
+    font-size: 1.2rem;
 }
 .profile img
 {
@@ -557,4 +562,114 @@ body.light_mode
     {
         background-color: aqua;
     }
+}
+
+/* Draggable Menu */
+.navigation
+{
+    position: relative;
+    top: 1rem;
+    width: 3rem;
+    height: 3rem;
+    background: #fff;
+    transition: width 0.5s, height 0.5s;
+    transition-delay: 0s, 0.75s;
+    z-index: 1000000;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.navigation.nav
+{
+    width: 15rem;
+    height: 20rem;
+    transition: height 0.5s, width 0.5s;
+    transition-delay: 0s, 0.65s;
+}
+.navigation .n_toggle
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.navigation .n_toggle.nav
+{
+    background: #2196f3;
+}
+.navigation .n_toggle::before
+{
+    content: '+';
+    position: absolute;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    color: #000;
+    font-weight: 400;
+    transition: 0.5s;
+}
+.navigation .n_toggle.nav::before
+{
+    transform: rotate(315deg);
+}
+.navigation ul
+{
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+.navigation ul li
+{
+    position: relative;
+    list-style: none;
+    width: 100%;
+}
+.navigation ul li:hover
+{
+    background: #03a9f4;
+}
+.navigation ul li a
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #154367;
+}
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+    min-width: 3rem;
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+}
+.navigation ul li a .icon .fas
+{
+    font-size: 1.5rem;
+    color: 154367;
+}
+.navigation ul li a .title
+{
+    position: relative;
+    display: block;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: start;
+    white-space: nowrap;
+}
+.navigation ul li:hover a .icon .fas,
+.navigation ul li:hover a .title
+{
+    color: #fff;
 }
