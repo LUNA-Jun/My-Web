@@ -10,9 +10,9 @@ body
 {
     display: flex;
     justify-content: center;
-    align-self: center;
+    align-items: center;
     min-height: 100vh;
-    background: #222;
+    background: #111;
     transition: 0.5s;
 }
 
@@ -29,8 +29,8 @@ body
     max-width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(50rem, 1fr));
-    grid-template-rows: minmax(20rem, auto);
-    margin: 5rem;
+    grid-template-rows: minmax(30rem, auto);
+    margin: 10rem;
     grid-auto-flow: dense;
     grid-gap: 1rem;
 }
@@ -672,4 +672,142 @@ body.light_mode
 .navigation ul li:hover a .title
 {
     color: #fff;
+}
+
+/* project */
+.p_body
+{
+    width: 100%;
+}
+.p_container
+{
+    position: relative;
+    max-width: 62.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.p_container .card
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 6.25rem 0;
+}
+.p_container .card:nth-child(odd)
+{
+    flex-direction: row;
+}
+.p_container .card:nth-child(even)
+{
+    flex-direction: row-reverse;
+    text-align: right;
+}
+.p_container .card .imgBx
+{
+    position: relative;
+    left: 1.5rem;
+    width: 31.25rem;
+    height: 25rem;
+    z-index: 1;
+}
+.p_container .card:nth-child(even) .imgBx
+{
+    left: -1.5rem;
+}
+.p_container .card .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.p_container .card .contentBx
+{
+    position: relative;
+    right: 1.5rem;
+    width: 30.25rem;
+    height: 25rem;
+    background: rgb(84, 66, 105);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem 3.75rem 1.25rem 6.25rem;
+}
+.p_container .card:nth-child(even) .contentBx
+{
+    right: -1.5rem;
+    padding: 1.25rem 6.25rem 1.25rem 3.75rem;
+}
+.p_container .card .contentBx:before
+{
+    content: '';
+    position: absolute;
+    top: -2rem;
+    bottom: -2rem;
+    left: 0;
+    right: 0;
+    background: rgb(84, 66, 105);
+    z-index: -1;
+}
+.p_container .card .contentBx h2
+{
+    font-size: 2rem;
+    color: #ffffff;
+}
+.p_container .card .contentBx p
+{
+    margin-top: 0.5rem;
+    color: #ffffff;
+}
+.p_container .card .contentBx a
+{
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem;
+    border: 0.2rem solid #80787d;
+}
+@media (max-width : 1000px)
+{
+    .p_container .card
+    {
+        flex-direction: column;
+        max-width: 21.2rem;
+        margin: 1.5rem;
+    }
+    .p_container .card .imgBx
+    {
+        width: 40rem;
+        height: 15.7rem;
+        left: 0;
+    }
+    .p_container .card .contentBx
+    {
+        width: 40rem;
+        height: 20rem;
+        right: 0;
+        padding: 1.875rem;
+        text-align: center;
+    }
+    .p_container .card .contentBx:before
+    {
+        top: 0;
+        bottom: 0;
+    }
+    .p_container .card:nth-child(even) .imgBx
+    {
+        left: 0;
+    }
+    .p_container .card:nth-child(even) .contentBx
+    {
+        right: 0;
+        padding: 1.875rem;
+    }
 }
